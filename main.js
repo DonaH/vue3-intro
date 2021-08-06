@@ -2,7 +2,8 @@ const app = Vue.createApp({
   data() {
     return {
       product: 'Socks',
-      description: 'V-logo super soft socks'
+      image: './assets/images/socks_green.jpg',
+      url: 'https://donah.github.io'
     }
   }
 })
