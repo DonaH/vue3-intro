@@ -1,7 +1,7 @@
 ## Vue 3 Basic 
 
 - Creation Date: 2021-08-05
-- Modified Date: 
+- Modified Date: 2021-08-06
 ## Simple product app
 
 * Intro to Vue 3
