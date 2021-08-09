@@ -16,10 +16,13 @@
 11. Forms & v-model
 ---
 ### Resources:
-[Official Vue 3 site](https://v3.vuejs.org/guide/introduction.html)
-[VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/intro-to-vue3)
-[VueMastery Courses](https://www.vuemastery.com/courses/)
-[VueMastery Repo to code along](https://github.com/Code-Pop/Intro-to-Vue-3)
+* [Official Vue 3 site](https://v3.vuejs.org/guide/introduction.html)
+
+* [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/intro-to-vue3)
+
+* [VueMastery Courses](https://www.vuemastery.com/courses/)
+
+* [VueMastery Repo to code along](https://github.com/Code-Pop/Intro-to-Vue-3)
 
 ---
 
