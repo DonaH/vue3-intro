@@ -94,81 +94,83 @@
 
 ##### 4. Conditional Rendering - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/conditional-rendering-vue3)
   * Directives: v-if | v-else | v-show
-  :open_file_folder: main.js
-    ```
-      const app = Vue.createApp({
-        data() {
-            return {
-                product: 'Socks',
-                image: './assets/images/socks_blue.jpg',
-                inStock: true 
-            }
-        }
-      })
-    ```
-    :open_file_folder: index.html
-    ```
-    <p v-if="inStock">In Stock</p>
-    <p v-else>Out of Stock</p>
-    ```
-    ```
-    <p v-show="inStock">In Stock</p>
-    ```
+
     :open_file_folder: main.js
-    ```
-    const app = Vue.createApp({
-        data() {
-            return {
-                ...
-                inventory: 100 
-        }
-    ```
-    :open_file_folder: index.html
-    ```
-    <p v-if="inventory > 10">In Stock</p>
-    <p v-else>Out of Stock</p>
-    ```
-    ```
-    <p v-if="inventory > 10">In Stock</p>
-    <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
-    <p v-else>Out of Stock</p>
-    ```
+      ```
+        const app = Vue.createApp({
+          data() {
+              return {
+                  product: 'Socks',
+                  image: './assets/images/socks_blue.jpg',
+                  inStock: true 
+              }
+          }
+        })
+      ```
+      :open_file_folder: index.html
+      ```
+      <p v-if="inStock">In Stock</p>
+      <p v-else>Out of Stock</p>
+      ```
+      ```
+      <p v-show="inStock">In Stock</p>
+      ```
+      :open_file_folder: main.js
+      ```
+      const app = Vue.createApp({
+          data() {
+              return {
+                  ...
+                  inventory: 100 
+          }
+      ```
+      :open_file_folder: index.html
+      ```
+      <p v-if="inventory > 10">In Stock</p>
+      <p v-else>Out of Stock</p>
+      ```
+      ```
+      <p v-if="inventory > 10">In Stock</p>
+      <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+      <p v-else>Out of Stock</p>
+      ```
 
 ##### 5. List Rendering - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/list-rendering-vue3)
   * Looping through an array list and array of objects: v-for
-  :open_file_folder: main.js
-    ```
-    const app = Vue.createApp({
-        data() {
-            return {
-                ...
-                details: ['50% cotton', '30% wool', '20% polyester']
-            }
-        }
-    })
-    ```
-    :open_file_folder: index.html
-    ```
-    <ul>
-      <li v-for="detail in details">{{ detail }}</li>
-    </ul>
-    ```
+
     :open_file_folder: main.js
-    ```
-    data() {
-      return {
-        ...
-        variants: [
-          { id: 2234, color: 'green' },
-          { id: 2235, color: 'blue' }
-        ]
+      ```
+      const app = Vue.createApp({
+          data() {
+              return {
+                  ...
+                  details: ['50% cotton', '30% wool', '20% polyester']
+              }
+          }
+      })
+      ```
+      :open_file_folder: index.html
+      ```
+      <ul>
+        <li v-for="detail in details">{{ detail }}</li>
+      </ul>
+      ```
+      :open_file_folder: main.js
+      ```
+      data() {
+        return {
+          ...
+          variants: [
+            { id: 2234, color: 'green' },
+            { id: 2235, color: 'blue' }
+          ]
+        }
       }
-    }
-    ```
-    :open_file_folder: index.html
-    ```
-    <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
-    ```
+      ```
+      :open_file_folder: index.html
+      ```
+      <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
+      ```
 
 
 ##### 6. Event Handling - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/event-handling-vue3)
@@ -503,6 +505,7 @@
   > Notice the template literal *back ticks* ` `` `, /\*html\*/  & VSCode extension:es6-string-html, syntax highlighting should work in VSCode.
 
 * Move `data` & `methods` from `main.js` to here
+
   :open_file_folder: components/ProductDisplay.js
   ```
   app.component('product-display', {
@@ -545,6 +548,7 @@
   })
   ```
 * Cleaning up `main.js` - leaving only cart data & empty methods for now
+
   ```
   const app = Vue.createApp({
     data() {
@@ -556,12 +560,14 @@
   })
   ```
 * Importing the Component
+
   :open_file_folder: index.html
   ```
   <!-- Import Components -->
   <script src="./components/ProductDisplay.js"></script>
   ```
 * Using it in the template:
+
   :open_file_folder: index.html
   ```
   <div id="app">
@@ -572,6 +578,7 @@
   </div>
   ```
 * Example of reusable blocks - add two more `product-display` components
+
   :open_file_folder: index.html
   ```
   <div id="app">
@@ -588,6 +595,7 @@
 
 Giving component a prop - premium account 
   * set the type & if it's required
+
     :open_file_folder: main.js
     ```
     const app = Vue.createApp({
@@ -612,6 +620,7 @@ Giving component a prop - premium account
     }
     ```
   * Add custom attribute to `product-display` component
+
   :open_file_folder: index.html
     ```
     <div id="app">
@@ -622,6 +631,7 @@ Giving component a prop - premium account
     </div>
     ```
   * Conditionally display shipping cost - if `premium` is `true`, shipping is free, otherwise, $2.99
+
   :open_file_folder: components/ProductDisplay.js
     ```
     template: 
@@ -646,6 +656,7 @@ Giving component a prop - premium account
     ```
 ##### 10. Communicating Events - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/communicating-events-vue3)
 * Emitting the event - from product display component to `main.js` so we can update the cart
+
   :open_file_folder: components/ProductDisplay.js
   ```
   methods: {
@@ -660,6 +671,7 @@ Giving component a prop - premium account
   <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
   ```
 * Add `updateCart()` method in `main.js`
+
   :open_file_folder: main.js
   ```
   const app = Vue.createApp({
@@ -677,6 +689,7 @@ Giving component a prop - premium account
   })
   ```
 * Add product `id` to the cart
+
   :open_file_folder: main.js
   ```
   const app = Vue.createApp({
@@ -693,6 +706,7 @@ Giving component a prop - premium account
     }
     ```
 * Add a payload to `add-to-cart` event emission, so `updateCart` has access to that `id`
+
   :open_file_folder: components/ProductDisplay.js
   ```
   methods: {
@@ -703,6 +717,7 @@ Giving component a prop - premium account
   }
   ```
 * Since no need to display the `id` in the cart, we can use `.length` method to display the amount of items instead
+
   ```
   <div id="app">
   ...
@@ -712,9 +727,11 @@ Giving component a prop - premium account
   ```
 
 ##### 11. Forms & v-model - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/forms-and-v-model-vue3)
+
 * Add a Product Review Form with Two-way Binding: `v-model`
 
 * Create new component - ReviewForm.js 
+
   :open_file_folder: components/ReviewForm.js
   ```
   app.component('review-form', {
@@ -749,11 +766,13 @@ Giving component a prop - premium account
   })
   ```
 * Inside of the template, notice these elements:
+
   * `<input id="name">`
   * `<textarea id="review">`
   * `<select id="rating">`
 
 * Bind these input fields to their respective data properties
+
   ```
     data() {
     return {
@@ -765,6 +784,7 @@ Giving component a prop - premium account
   ```
 
 * Add `v-model` directive to each of these input elements
+
   :open_file_folder: components/ReviewForm.js
   ```
   app.component('review-form', {
@@ -797,10 +817,14 @@ Giving component a prop - premium account
     }
   })
   ```
+
+
   > Notice how on the \<select> element, we used `v-model.number` this is a modifier that typecasts the value as a number.
 
 * Submitting the Review Form
+
   * Add a listener
+
     :open_file_folder: components/ReviewForm.js
     ```
     app.component('review-form', {
@@ -814,6 +838,7 @@ Giving component a prop - premium account
     })
     ```
   * Add `onSubmit()` method
+
     :open_file_folder: components/ReviewForm.js
     ```
     ...
@@ -841,6 +866,7 @@ Giving component a prop - premium account
     ...
     ```
   * Import the Review Form 
+
     :open_file_folder: index.html
     ```
     <!-- Import Components -->
@@ -849,6 +875,7 @@ Giving component a prop - premium account
     ...
     ```
   * Use `review-form` component inside Product Display
+
     :open_file_folder: components/ProductDisplay.js
     ```
     template: 
@@ -862,7 +889,9 @@ Giving component a prop - premium account
     })
     ```
 * Adding Product Reviews
+
   * Add event listener onto the `review-form`
+
     :open_file_folder: components/ProductDisplay.js
     ```
     template: 
@@ -876,6 +905,7 @@ Giving component a prop - premium account
     })
     ```
   * Add a new `addReview()` method
+
     :open_file_folder: components/ProductDisplay.js
     ```
     ...
@@ -894,7 +924,9 @@ Giving component a prop - premium account
     ...
     ```
 * Displaying the reviews
+
   * Create new component - ReviewList.js to show the product review
+
     :open_file_folder: components/ReviewList.js
     ```
     app.component('review-list', {
@@ -922,6 +954,7 @@ Giving component a prop - premium account
     })
     ```
   * Import this new component
+
     :open_file_folder: index.html
     ```
     <!-- Import Components -->
@@ -943,6 +976,7 @@ Giving component a prop - premium account
     })
     ```
 * Don't show the review if none is present using `.length` method 
+
   :open_file_folder: components/ProductDisplay.js
   ```
   template: 
@@ -956,6 +990,7 @@ Giving component a prop - premium account
   ```
 
 * Basic Form Validation
+
   :open_file_folder: components/ReviewForm.js
   ```
   methods: {
