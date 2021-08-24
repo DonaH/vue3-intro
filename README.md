@@ -16,11 +16,6 @@
 11. Forms & v-model
 ---
 
-![](/assets/images/app-view.png)
-![](/assets/images/review-form-view.png)
-
----
-
 ### Resources:
 * [Official Vue 3 site](https://v3.vuejs.org/guide/introduction.html)
 
