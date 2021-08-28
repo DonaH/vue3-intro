@@ -29,7 +29,7 @@
 
 ### Details for Each Topic
 
-##### Intro to Vue 3
+#### Intro to Vue 3
   * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/intro-to-vue3)
   * Covers fundamentals of building a Vue app
   * Administer variations of product
@@ -40,7 +40,7 @@
     * es6-string-html by Tobermory
 ---
 
-##### Creating the Vue App
+#### Creating the Vue App
   * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/creating-the-vue-app-vue3)
 
   * Create Vue app:
@@ -81,7 +81,7 @@
   > **Reactivity System** underneath the hood will take care of the DOM updates. Learn more here >> [Reactivity in Depth](https://v3.vuejs.org/guide/reactivity.html#what-is-reactivity)
 ---
 
-##### Attribute Binding 
+#### Attribute Binding 
   * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/attribute-binding-vue3)
   * Attribute binding example:
     ```
@@ -100,7 +100,7 @@
     ```
 ---
 
-##### Conditional Rendering
+#### Conditional Rendering
   * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/conditional-rendering-vue3)
   * Directives: v-if | v-else | v-show
 
@@ -145,7 +145,7 @@
       ```
 ---
 
-##### List Rendering
+#### List Rendering
   * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/list-rendering-vue3)
   * Looping through an array list and array of objects: v-for
 
@@ -184,7 +184,7 @@
       ```
 ---
 
-##### Event Handling 
+#### Event Handling 
   * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/event-handling-vue3)
   * Event Handling
 
@@ -258,7 +258,7 @@
     ```
 ---
 
-##### Class and Style Binding
+#### Class and Style Binding
 * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/class-and-style-binding-vue3)
 * Style Binding
   :open_file_folder: index.html
@@ -297,7 +297,7 @@
     :style="{ backgroundColor: variant.color }">
   </div>
   ```
-  > ##### Camel vs Kebab
+  > #### Camel vs Kebab
   >Use Camel case for css property inside JavaScript Expression:
   >```
   ><div :style="{ backgroundColor: variant.color }></div>
@@ -386,7 +386,7 @@
   ```
 ---
 
-##### Computed Properties 
+#### Computed Properties 
 * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/computed-properties-vue3)
 * Simple Computed Property
 
@@ -474,10 +474,10 @@
   ```
 ---
 
-##### Components and Props 
+#### Components and Props 
 * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/components-and-props-vue3)
 
-##### Components
+#### Components
 * Create ProductDisplay component
   :open_file_folder: components/ProductDisplay.js
   ```
@@ -608,7 +608,7 @@
     <product-display></product-display>
   </div>
   ```
-##### Props
+#### Props
 * props are custom attributes for passing data into a component.
 
 Giving component a prop - premium account 
@@ -678,7 +678,7 @@ Giving component a prop - premium account
   ```
     
 ---
-##### Communicating Events 
+#### Communicating Events 
 * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/communicating-events-vue3)
 * Emitting the event - from product display component to `main.js` so we can update the cart
 
@@ -752,7 +752,7 @@ Giving component a prop - premium account
   ```
 ---
 
-##### Forms and v-model 
+#### Forms and v-model 
 * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/forms-and-v-model-vue3)
 
 * Add a Product Review Form with Two-way Binding: `v-model`
