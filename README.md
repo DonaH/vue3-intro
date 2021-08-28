@@ -3,17 +3,17 @@
 ## Simple Product App
 
 ### Overview of Topics
-1. Intro to Vue 3
-2. Creating the Vue App
-3. Attribute Binding
-4. Conditional Rendering
-5. List Rendering
-6. Event Handling
-7. Class & Style Binding
-8. Computed Properties
-9. components & Props
-10. Communicating Events
-11. Forms & v-model
+* [Intro to Vue 3](#intro-to-vue-3)
+* [Creating the Vue App](#creating-the-vue-app)
+* [Attribute Binding](#attribute-binding)
+* [Conditional Rendering](#conditional-rendering)
+* [List Rendering](#list-rendering)
+* [Event Handling](#event-handling)
+* [Class and Style Binding](#class-and-style-binding)
+* [Computed Properties](#computed-properties)
+* [Components and Props](#components-and-props)
+* [Communicating Events](#communicating-events)
+* [Forms and v-model](#forms-and-v-model)
 ---
 
 ### Resources:
@@ -29,7 +29,8 @@
 
 ### Details for Each Topic
 
-##### 1. Intro to Vue 3 - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/intro-to-vue3)
+##### Intro to Vue 3
+  * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/intro-to-vue3)
   * Covers fundamentals of building a Vue app
   * Administer variations of product
   * Add to cart / remove from cart logic
@@ -37,8 +38,11 @@
   * Build a review form with Vue
   * Recommended extension for VSCode:
     * es6-string-html by Tobermory
+---
 
-##### 2. Creating the Vue App - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/creating-the-vue-app-vue3)
+##### Creating the Vue App
+  * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/creating-the-vue-app-vue3)
+
   * Create Vue app:
 
     :open_file_folder: main.js
@@ -75,8 +79,10 @@
       <div>{{ message.method() }}</div>
     ```
   > **Reactivity System** underneath the hood will take care of the DOM updates. Learn more here >> [Reactivity in Depth](https://v3.vuejs.org/guide/reactivity.html#what-is-reactivity)
+---
 
-##### 3. Attribute Binding - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/attribute-binding-vue3)
+##### Attribute Binding 
+  * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/attribute-binding-vue3)
   * Attribute binding example:
     ```
     <img v-bind:src="image">
@@ -92,8 +98,10 @@
     <span :style="isActive">
     <span :disables="isDisabled">
     ```
+---
 
-##### 4. Conditional Rendering - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/conditional-rendering-vue3)
+##### Conditional Rendering
+  * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/conditional-rendering-vue3)
   * Directives: v-if | v-else | v-show
 
     :open_file_folder: main.js
@@ -135,8 +143,10 @@
       <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
       <p v-else>Out of Stock</p>
       ```
+---
 
-##### 5. List Rendering - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/list-rendering-vue3)
+##### List Rendering
+  * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/list-rendering-vue3)
   * Looping through an array list and array of objects: v-for
 
     :open_file_folder: main.js
@@ -172,9 +182,10 @@
       ```
       <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
       ```
+---
 
-
-##### 6. Event Handling - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/event-handling-vue3)
+##### Event Handling 
+  * [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/event-handling-vue3)
   * Event Handling
 
     :open_file_folder: index.html
@@ -245,8 +256,10 @@
       }
     }
     ```
+---
 
-##### 7. Class & Style Binding - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/class-and-style-binding-vue3)
+##### Class and Style Binding
+* [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/class-and-style-binding-vue3)
 * Style Binding
   :open_file_folder: index.html
   ```
@@ -371,8 +384,10 @@
   ```
   <div :class="[ isActive ? activeClass : '' ]"></div>
   ```
+---
 
-##### 8. Computed Properties - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/computed-properties-vue3)
+##### Computed Properties 
+* [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/computed-properties-vue3)
 * Simple Computed Property
 
   :open_file_folder: main.js
@@ -457,8 +472,10 @@
     }
   }
   ```
+---
 
-##### 9. components & Props - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/components-and-props-vue3)
+##### Components and Props 
+* [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/components-and-props-vue3)
 
 ##### Components
 * Create ProductDisplay component
@@ -623,18 +640,20 @@ Giving component a prop - premium account
   * Add custom attribute to `product-display` component
 
   :open_file_folder: index.html
-    ```
+
+  ```
     <div id="app">
     <div class="nav-bar"></div>
 
     <div class="cart">Cart({{ cart }})</div>
       <product-display :premium="premium"></product-display>
     </div>
-    ```
+  ```
   * Conditionally display shipping cost - if `premium` is `true`, shipping is free, otherwise, $2.99
 
   :open_file_folder: components/ProductDisplay.js
-    ```
+
+  ```
     template: 
     /*html*/
     `<div class="product-display">
@@ -642,9 +661,11 @@ Giving component a prop - premium account
         <p>Shipping: {{ shipping }}</p>
       ...
     </div>`,
-    ```
-    :open_file_folder: components/ProductDisplay.js
-    ```
+  ```
+
+  :open_file_folder: components/ProductDisplay.js
+
+  ```
     computed: {
       ...
       shipping() {
@@ -654,8 +675,11 @@ Giving component a prop - premium account
           return 2.99
         }
     }
-    ```
-##### 10. Communicating Events - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/communicating-events-vue3)
+  ```
+    
+---
+##### Communicating Events 
+* [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/communicating-events-vue3)
 * Emitting the event - from product display component to `main.js` so we can update the cart
 
   :open_file_folder: components/ProductDisplay.js
@@ -726,8 +750,10 @@ Giving component a prop - premium account
   ...
   </div>
   ```
+---
 
-##### 11. Forms & v-model - [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/forms-and-v-model-vue3)
+##### Forms and v-model 
+* [VueMastery Video](https://www.vuemastery.com/courses/intro-to-vue-3/forms-and-v-model-vue3)
 
 * Add a Product Review Form with Two-way Binding: `v-model`
 
